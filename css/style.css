@@ -32,27 +32,6 @@ html {
   clip-path: polygon(100% 0%, 100% 80%, 50% 100%, 0 80%, 0 0);
   background-color: #c4c4c4;
 }
-
-/* laptop/desktop */
-@media (max-width: 900px) {
-}
-/* tablet*/
-@media (max-width: 992px) {
-}
-/* tablet/large mobile */
-@media (max-width: 768px) {
-}
-/* mobile */
-@media (max-width: 576px) {
-}
-/* .logo {
-  width: 140px;
-  border-radius: 50%;
-  height: 90px;
-  margin-left: 60px;
-  box-shadow: 5px 5px 3px black;
-  margin-top: 20px;
-} */
 nav {
   display: flex;
   justify-content: space-between;
@@ -113,45 +92,6 @@ nav {
 .links ul li:hover,
 .toggle-menu {
   cursor: pointer;
-}
-@media (max-width: 900px) {
-  .brand-name {
-    font-size: clamp(1.3125rem, 1.0781rem + 0.75vw, 1.5rem);
-    margin:45px 0 0 25px;
-    
-  }
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    
-  }
-  .toggle-menu {
-    display: flex;
-    position: absolute;
-    top: 3rem;
-    right: 0;
-    margin: 0 15px;
-  }
-  .links ul li{
-    margin:0;
-  }
-  nav .links {
-    display: none;
-    height: 90vh;
-  }
-  nav .links.active {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-  nav .links ul {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-  nav .links ul li {
-    width: 100%;
-  }
 }
 
 .toggle-menu.active span:nth-child(1) {
@@ -236,7 +176,47 @@ transform: scale(1.3);
 .links .menu-container #contact:hover a{
   cursor: auto;
   transform: translatey(5px);
-}  
+}
+
+@media (max-width: 900px) {
+  .brand-name {
+    font-size: clamp(1.3125rem, 1.0781rem + 0.75vw, 1.5rem);
+    margin:45px 0 0 25px;
+    
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  .toggle-menu {
+    display: flex;
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    margin: 0 15px;
+  }
+  .links ul li{
+    margin:0;
+  }
+  nav .links {
+    display: none;
+    height: 90vh;
+  }
+  nav .links.active {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  nav .links ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav .links ul li {
+    width: 100%;
+  }
+}
 
 
 /* .nav-link:link{
@@ -985,7 +965,7 @@ transform: scale(1.3);
       height: auto;
     }
     .contact-address {
-      height: 135vh;
+      height: auto;
     }
     .contact-bes {
       margin: 0;
@@ -1064,10 +1044,7 @@ transform: scale(1.3);
   color: black;
   text-align: center;
 }
-.social-natin {
-  width: 100%;
-  height: 70vh;
-}
+
 .title {
   text-align: center;
 }
@@ -1113,22 +1090,68 @@ right: 8px;
 }
 .social-link-mo .nav-link-mo:hover {
   color: #ff7c24;
+  
+}
+.social-link-mo .line{
+  height: 30vh;
+  width: 100%;
+  line-height: 20px;
+}
+.social-link-mo .line .loko {
+  width: auto;
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;
+  margin:6rem 0 0 0;
+  font-size: clamp(1rem, 0.6875rem + 1vw, 1.25rem);
+  list-style: none;
 }
 
-.site {
-  margin-top: 100px;
+.social-link-mo  li a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+.social-link-mo  .line li a::after {
+  content: "";
+  background: #fff;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+.social-link-mo  .line li a:hover::after {
+  width: 100%;
+}
+.social-link-mo .line .site {
+  margin-top: 5%;
   font-size: 15px;
+}
+.social-link-mo  .line #policy {
+  font-size: 12px;
+  
+}
+.social-link-mo  .line.year {
+  margin-top:0;
+}
+@media (min-width:1024px){
+  .social-link-mo{
+    height: 82vh;
+  }
+}
+@media (max-width:354px){
+  .social-link-mo .logs {
+    left: 5px;
+  }
+  .social-link-mo{
+    height: 81vh;
+  }
 }
 .containerss {
   width: 100%;
   display: flex;
-}
-#policy {
-  font-size: 12px;
-  
-}
-.year {
-  margin-top: 25px;
 }
 /* about */
 .about {
@@ -1436,34 +1459,7 @@ right: 8px;
 
 
 
-.line .loko {
-  width: auto;
-  display: flex;
-  padding: 0;
-  justify-content: space-evenly;
-  margin: 6rem 0 0 0;
-  font-size: clamp(1rem, 0.6875rem + 1vw, 1.25rem);
-  list-style: none;
-}
 
-.line li a {
-  text-decoration: none;
-  color: #fff;
-  position: relative;
-}
-.line li a::after {
-  content: "";
-  background: #fff;
-  width: 0;
-  height: 2px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: width 0.5s;
-}
-.line li a:hover::after {
-  width: 100%;
-}
 
 /* about us */
 
