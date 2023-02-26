@@ -50,7 +50,7 @@ nav {
 }
 .brand-name {
   font-size: clamp(1.3125rem, 1.0781rem + 0.75vw, 1.5rem);
-  margin: -8px 0 0 25px;
+  margin: 0 0 0 25px;
   font-weight: 600;
   letter-spacing: 3px;
 }
@@ -183,7 +183,7 @@ nav {
 @media (max-width: 900px) {
   .brand-name {
     font-size: clamp(1.3125rem, 1.0781rem + 0.75vw, 1.5rem);
-    margin: 45px 0 0 25px;
+    margin: 47px 0 0 25px;
   }
   nav {
     flex-direction: column;
@@ -1257,7 +1257,7 @@ nav {
     left: 5px;
   }
   .social-link-mo {
-    height: 83vh;
+    height: 84vh;
   }
   .social-link-mo .line .loko {
     margin: 8rem 0 0 0;
@@ -1268,7 +1268,7 @@ nav {
     left: 5px;
   }
   .social-link-mo {
-    height: 82vh;
+    height: 83vh;
   }
   .social-link-mo .line .loko {
     margin: 8rem 0 0 0;
@@ -1302,7 +1302,7 @@ nav {
     margin: 8rem 0 0 0;
   }
   .social-link-mo .line .site {
-    margin-top: 8%;
+    margin-top: 10%;
   }
 }
 @media (max-width: 567px) {
@@ -1316,7 +1316,7 @@ nav {
     margin: 8rem 0 0 0;
   }
   .social-link-mo .line .site {
-    margin-top: 12%;
+    margin-top: 15%;
   }
 }
 @media (max-width: 375px) {
@@ -1328,7 +1328,7 @@ nav {
     margin: 8rem 0 0 0;
   }
   .social-link-mo .line .site {
-    margin-top: 16%;
+    margin-top: 18%;
   }
 }
 .containerss {
