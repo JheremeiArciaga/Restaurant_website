@@ -16,6 +16,189 @@ html {
   /* property + value */
   scroll-behavior: smooth;
   scroll-padding-top: 150px;
+  
+}
+#page-loader{
+align-items: center;
+background-color: #ffffff;
+display: flex;
+width: 100%;
+justify-content: center;
+height: 100vh;
+position: fixed;
+z-index: 4000;
+}
+
+.loader {
+  align-items: center;
+  background-color: #1a1a1f;
+  color: #fff;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s;
+  width:170px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+}
+
+.loader:hover {
+  background-color: var(--custom-color);
+  
+  color: #050801;
+}
+
+.loader span {
+  display: block;
+  position: absolute;
+}
+
+.loader span:nth-child(1) {
+  background: linear-gradient(90deg, transparent,  rgb(255, 124, 36));
+  height: 5px;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  animation: animate1 2s linear infinite;
+  animation-delay: 0s;
+}
+.loader:hover span:nth-child(1) {
+  background: linear-gradient(90deg, transparent,  rgb(0, 0, 0));
+  height: 7px;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  
+  animation: animate1 2s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.loader span:nth-child(3) {
+  background: linear-gradient(270deg, transparent,  rgb(255, 124, 36));
+  bottom: 0;
+  height: 5px;
+  right: -100%;
+  width: 100%;
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
+}
+.loader:hover span:nth-child(3) {
+  background: linear-gradient(270deg, transparent,  rgb(0, 0, 0));
+  bottom: 0;
+  height: 7px;
+  right: -100%;
+  width: 100%;
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.loader span:nth-child(2) {
+  background: linear-gradient(180deg, transparent,  rgb(255, 124, 36));
+  height: 100%;
+  right: 0;
+  top: -100%;
+  width: 5px;
+  animation: animate2 2s linear infinite;
+  animation-delay: 0.5s;
+}
+.loader:hover span:nth-child(2) {
+  background: linear-gradient(180deg, transparent,  rgb(0, 0, 0));
+  height: 100%;
+  right: 0;
+  top: -100%;
+  width: 7px;
+  animation: animate2 2s linear infinite;
+  animation-delay: 0.5s;
+}
+
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.loader span:nth-child(4) {
+  background: linear-gradient(360deg, transparent,  rgb(255, 124, 36));
+  bottom: -100%;
+  height: 100%;
+  left: 0;
+  width: 5px;
+  animation: animate4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+.loader:hover span:nth-child(4) {
+  background: linear-gradient(360deg, transparent,  rgb(0, 0, 0));
+  bottom: -100%;
+  height: 100%;
+  left: 0;
+  width: 7px;
+  animation: animate4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loader h5 {
+  border-right: 1px solid  rgb(255, 124, 36);
+  color:  rgb(255, 124, 36);
+  font-family: consolas;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: 0.5s;
+  animation: typing 5s steps(10) infinite;
+}
+
+.loader:hover h5 {
+  border-right: 1px solid #111;
+  color: #111;
+}
+
+@keyframes typing {
+  0%,
+  90%,
+  100% {
+    width: 0px;
+  }
+  30%,
+  60% {
+    width: 123.89px;
+  }
 }
 
 #hero-img {
@@ -31,7 +214,7 @@ html {
   clip-path: polygon(100% 0%, 100% 80%, 50% 100%, 0 80%, 0 0);
   background-color: #c4c4c4;
 }
-nav {
+.navbars {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -184,7 +367,7 @@ nav {
     font-size: clamp(1.3125rem, 1.0781rem + 0.75vw, 1.5rem);
     margin: 47px 0 0 25px;
   }
-  nav {
+  .navbars {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -198,21 +381,21 @@ nav {
   .links ul li {
     margin: 0;
   }
-  nav .links {
+  .navbars .links {
     display: none;
     height: 90vh;
   }
-  nav .links.active {
+  .navbars .links.active {
     display: block;
     width: 100%;
     text-align: center;
   }
-  nav .links ul {
+  .navbars .links ul {
     width: 100%;
     flex-direction: column;
     align-items: center;
   }
-  nav .links ul li {
+  .navbars .links ul li {
     width: 100%;
   }
 }
@@ -443,6 +626,7 @@ nav {
 @media (min-width: 1121px) {
   #productss {
     height: auto;
+    
   }
   .product-coss {
     height: auto;
@@ -783,6 +967,7 @@ nav {
 @media (min-width: 1326px) {
   #product {
     height: auto;
+   
   }
   .Product {
     column-gap: 60px;
@@ -793,13 +978,15 @@ nav {
   .product-co {
     margin-top: 2px;
     height: auto;
-
+   
     padding: 10px 0 45px 0;
   }
   .product-list {
     width: 110%;
     margin-top: 15px;
     height: 355px;
+    
+    
   }
   .product-list img {
     width: 100%;
@@ -817,7 +1004,7 @@ nav {
 /* contact section */
 .contact-address {
   height: 105vh;
-
+  
   margin: 0;
 }
 .contact-address h5 {

@@ -23,3 +23,10 @@ var swiper = new Swiper(".mySwiper", {
     links.classList.toggle("active");
     toggleMenu.classList.toggle("active");
   });
+  let loader = document.getElementById("page-loader");
+  window.addEventListener('load', function(load) {
+    window.removeEventListener('load', load, false);               
+    setTimeout(function(){loader.style.display = 'none'},3000);
+  
+  },false);
+ 
