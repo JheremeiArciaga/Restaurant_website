@@ -26,7 +26,7 @@ var swiper = new Swiper(".mySwiper", {
   let loader = document.getElementById("page-loader");
   window.addEventListener('load', function(load) {
     window.removeEventListener('load', load, false);               
-    setTimeout(function(){loader.style.display = 'none'},3000);
+    setTimeout(function(){loader.style.display = 'none'},2000);
   
   },false);
  
