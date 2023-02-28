@@ -28,15 +28,25 @@
 </head>
 
 <body>
-    <div class="loaders" style="overflow: hidden;">
+    <div class="loaders">
     <div id="page-loader" >
-    <div class="loader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <h5>Loading...</h5>
-      </div>
+        <div class="loading">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="cooking">
+                <div class="pan">
+                    <span class="inner"></span>
+                    <span class="handle"></span>
+                </div>
+                <div class="food">
+                    <div class="cake"></div>
+                </div>
+            </div>
+        </div>
+    
     </div>
 </div>
     <!-- Start of HEADER -->
@@ -51,20 +61,20 @@
             <div class="links">
                 <ul class="menu-container" data-aos="fade-left">
                     <li id="home" class="animate__animated animate__shakeX">
-                        <a href="" class="active">Home</a>
+                        <a href="" class="active" data-text="Home">Home</a>
                     </li>
                     <li class="li-li">
-                        <a class="nav-links" href="About.html">About</a>
+                        <a class="nav-links" href="About.html" data-text="About">About</a>
                     </li>
                     <li class="li-li">
-                        <a class="nav-links" href="Menu.html">Menu</a>
+                        <a class="nav-links" href="Menu.html" data-text="Menu">Menu</a>
                     </li>
                     <li class="li-li">
-                        <a class="nav-links" href="Contact.html">Contact</a>
+                        <a class="nav-links" href="Contact.html" data-text="Contact">Contact</a>
                     </li>
                     <li class="li-li">
                         <!-- dapat naka home and copy the id of testimonial which is #tes1 -->
-                        <a class="nav-links" href="index.html#tes1">Testimonials</a>
+                        <a class="nav-links" href="index.html#tes1 " data-text="Testimonials">Testimonials</a>
                     </li>
                     <div>
                         <a id="ico" href="index.html"><img src="images/cart.svg" style="max-width: 35px;"></a>
@@ -83,7 +93,7 @@
             <!-- End of Header -->
             <!-- background-image -->
             <div class="hero-wrapper">
-                <p data-aos="fade-up">Filipino comfort food with a Southeast Asian Twist
+                <p data-aos="fade-right">Filipino comfort food with a Southeast Asian Twist
                     <span class="b" style="color:#ff7c24; "><br>GOOD FOOD FOR EVEN BETTER COMPANY</span>
                 </p>
                 <form action="" class="form-code">
@@ -100,11 +110,11 @@
             <!-- pre tag kung ayaw mo ng br -->
             <div id="abadu" data-aos="fade-right">
 
-                <span
-                    style="font-family: 'Caveat', cursive; font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem); color: #ff7c24;line-height: 0; font-weight: 600; margin: 0;" data-aos="fade-left">
+                <span 
+                    style="font-family: 'Caveat', cursive; font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem); color: #ff7c24;line-height: 0; font-weight: 600; margin: 0;" >
                     About Us
                 </span>
-                <br><span style="font-size: clamp(1.0625rem, 0.2031rem + 2.75vw, 1.75rem); line-height: 0;" data-aos="fade-left"><b>Meet our
+                <br><span style="font-size: clamp(1.0625rem, 0.2031rem + 2.75vw, 1.75rem); line-height: 0;" ><b >Meet our
                         Team</b></span><br>
                 <br>
 
